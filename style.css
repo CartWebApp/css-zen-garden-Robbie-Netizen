@@ -1,19 +1,26 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
-html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,a,abbr,acronym,em,img,ol,ul,li {
-
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, em, img, ol, ul, li {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(170, 217, 255);
 }
 
 * {
-
+    margin: 0;
+    padding: 0;
 }
 
 html {
-
+    background-image: url(black-hole-color.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    filter: invert(100%);
 }
 
 body {
-
+    
 }
 
 body:before, body:after {
@@ -29,19 +36,31 @@ body:after {
 }
 
 .page-wrapper {
-
+    background-color: rgba(255, 255, 255, .1);
+    margin: 25px;
+    padding: 25px;
+    position: center center;
 }
 
 .page-wrapper:before {
-
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: grayscale(10%)
 }
 
 .page-wrapper:after {
-
+    
 }
 
 h1, h2, h3, h4, h5 {
 
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 3.5em;
+    color: rgb(208, 241, 255);
 }
 
 a {
@@ -58,7 +77,7 @@ p {
 
 /* -------INTRO SECTION------ */
 .intro {
-
+ max-width: 75vw;
 }
 
 .intro p {
@@ -122,7 +141,7 @@ p {
 
 }
 
-.sidebar a:hover, sidebar a:focus {
+.sidebar a:hover, .sidebar a:focus {
 
 }
 
@@ -179,7 +198,8 @@ h3.archives, h3.resources {
 }
 
 .sidebar .wrapper {
-
+    position: fixed;
+    max-width: 25vw;
 }
 
 .zen-resources {
@@ -301,7 +321,7 @@ footer a:hover, footer a:focus {
 }
 
 .main {
-
+    max-width: 75vw;
 }
 
 .sidebar {
