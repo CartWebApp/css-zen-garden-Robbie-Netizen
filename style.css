@@ -1,8 +1,22 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
-html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, em, img, ol, ul, li {
+:root {
+    --sidebar: 220px;
+    --accent: #0ea5e9;
+    --accent-hover: #0284c7;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --muted-size: 16px;
+    --border-color: #cbd5e1;
+    --header-color: #adc7d2;
+    --text-color: #82a7c4;
+    --radius: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(170, 217, 255);
+}
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, em, img, ol, ul, li {
+    color: var(--text-color);
 }
 
 * {
@@ -10,13 +24,58 @@ html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, em, 
     padding: 0;
 }
 
-html {
+[role="banner"] {
     background-image: url(black-hole-color.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-    filter: invert(100%);
+    background-position: center;
+    padding: 50px;
+}  
+
+[title] {
+    cursor: help;
+    border-bottom: 1px dotted var(--text-color);
+    border-bottom: none;
+    text-decoration: none;
+}
+
+h1::before {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    content: "";
+    width: 100px;
+    height: 100px;
+    margin: -20px 20px 0 0;
+    background: url(spacecraft-interstellar.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-self: center;
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+}
+
+h2>abbr {
+    color: var(--header-color);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+html {
+
 }
 
 body {
@@ -36,15 +95,11 @@ body:after {
 }
 
 .page-wrapper {
-    background-color: rgba(255, 255, 255, .1);
-    margin: 25px;
-    padding: 25px;
-    position: center center;
+
 }
 
 .page-wrapper:before {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: grayscale(10%)
+
 }
 
 .page-wrapper:after {
@@ -53,14 +108,6 @@ body:after {
 
 h1, h2, h3, h4, h5 {
 
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 3.5em;
-    color: rgb(208, 241, 255);
 }
 
 a {
@@ -77,7 +124,7 @@ p {
 
 /* -------INTRO SECTION------ */
 .intro {
- max-width: 75vw;
+
 }
 
 .intro p {
@@ -198,8 +245,7 @@ h3.archives, h3.resources {
 }
 
 .sidebar .wrapper {
-    position: fixed;
-    max-width: 25vw;
+
 }
 
 .zen-resources {
@@ -321,7 +367,7 @@ footer a:hover, footer a:focus {
 }
 
 .main {
-    max-width: 75vw;
+
 }
 
 .sidebar {
