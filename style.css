@@ -3,28 +3,141 @@
 :root {
     --sidebar: 220px;
     --accent: #0ea5e9;
-    --accent-hover: #0284c7;
+    --accent-hover: #ffffff;
+    --accent-visited: #3b82f6;
     --bg: #f7fafc;
-    --card: #ffffff;
+    --card: #000000;
     --muted: #6b7280;
     --muted-size: 16px;
-    --border-color: #cbd5e1;
+    --border-color: #2c2e31;
     --header-color: #adc7d2;
-    --text-color: #82a7c4;
+    --text-color: #60a8da;
+    --offset-color: #f9ffff;
     --radius: 16px;
+    --background-color: #000913;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
 }
 
-html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, em, img, ol, ul, li {
+html, body, div, span, object, h1, h2, h3, p, a, abbr, acronym, img, ul, li {
     color: var(--text-color);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 1px;
 }
 
-[role="banner"] {
+p::selection, h1::selection, h2::selection, h3::selection, a::selection, ul::selection, li::selection {
+    background: var(--accent);
+    color: var(--accent-hover);
+}
+
+div[role~="article"] h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: start;
+}
+
+div[id|="design"] h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+}
+
+a:visited {
+    color: var(--accent-visited);
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+a:hover{
+    color: var(--accent-hover);
+    outline: none;
+}
+a:active {
+    color: var(--accent);
+}
+
+.wrapper .design-selection, .design-archives, .zen-resources {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--card);
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+#css-zen-garden {
+    background-color: var(--background-color);
+}
+
+
+.page-wrapper{
+    display: grid;
+    grid-template: repeat(3,auto) / auto max-content;
+    grid-template-areas: "intro side"
+                         "content side"
+                         "foot  foot";
+    gap: 20px;
+}
+
+section.intro {
+    grid-area: intro;
+}
+
+.main.supporting {
+    grid-area: content;
+    display: grid;
+    grid-template: auto auto / 50% 50%;
+    grid-template-areas: "explanation particitation"
+                         "requirements benefits";
+
+}
+
+.explanation {
+    grid-area: explanation;
+}
+
+.participation {
+    grid-area: particitation;
+}
+
+.benefits {
+    grid-area: benefits;
+}
+
+.requirements {
+    grid-area: requirements;
+}
+
+
+.sidebar {
+    grid-area: side;
+    margin: 10%;
+}
+
+footer  {
+    grid-area: foot;
+}
+
+body {
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 18px;
+
+}
+
+[role=banner] {
     background-image: url(black-hole-color.jpg);
     background-size: cover;
     background-position: center;
@@ -47,6 +160,7 @@ h1::before {
     height: 100px;
     margin: -20px 20px 0 0;
     background: url(spacecraft-interstellar.webp);
+    opacity: 0.85;
     background-repeat: no-repeat;
     background-size: 100%;
     justify-self: center;
@@ -54,25 +168,80 @@ h1::before {
 
 h1 {
     font-size: 100px;
-    margin-bottom: 10px;
     color: var(--header-color);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     text-align: center;
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 50px;
     margin-bottom: 10px;
     color: var(--header-color);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     text-align: center;
 }
 
-h2>abbr {
+h2>abbr, p>abbr {
     color: var(--header-color);
     text-decoration: none;
-    border-bottom: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 html {
 
