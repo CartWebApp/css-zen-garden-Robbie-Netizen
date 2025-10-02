@@ -5,7 +5,7 @@
     --accent: #0ea5e9;
     --accent-hover: #ffffff;
     --accent-visited: #3b82f6;
-    --bg: #f7fafc;
+    --bg: linear-gradient(135deg, #000811, ##001333);
     --card: #000000;
     --muted: #6b7280;
     --muted-size: 16px;
@@ -19,8 +19,9 @@
     font-size: 18px;
 }
 
-:not(h1,h2) {
+:not(h1,h2,h3) {
     color: var(--text-color);
+    text-align: justify;
 }
 
 * {
@@ -30,7 +31,7 @@
     padding: 1px;
 }
 
-p::selection, h1::selection, h2::selection, h3::selection, a::selection, ul::selection, li::selection {
+*::selection {
     background: var(--accent);
     color: var(--accent-hover);
 }
@@ -86,7 +87,7 @@ a:active {
     background-color: var(--card);
     padding: 20px;
     margin-top: 15px;
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
 }
 
 #css-zen-garden {
@@ -125,6 +126,7 @@ section.intro {
     padding: 20px;
     box-sizing: border-box;
     border-radius: var(--radius);
+    border: 2px solid var(--border-color);
 }
 
 .sidebar {
@@ -138,9 +140,9 @@ footer  {
     width: max-content;
 }
 footer a[class^="zen"] {
-    text-decoration-line: underline;
+    text-decoration-line: overline underline;
     text-decoration-color: var(--text-color);
-    text-decoration-style: double;
+    text-decoration-style: single;
     text-decoration-thickness: 2px;
 }
 
@@ -176,7 +178,7 @@ body {
 }
 
 [role=banner] {
-    background-image: url(black-hole-color.jpg);
+    background-image: url(black-hole.jpg);
     border-radius: var(--radius);
     background-size: cover;
     background-position: center;
@@ -199,7 +201,7 @@ p::first-letter {
 }
 
 div:empty {
-    background-color: red;
+    background: var(--accent);
 }
 
 h1::before {
@@ -254,4 +256,9 @@ h3 {
     color: var(--header-color);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     text-align: start;
+}
+
+.extra1 {
+    position: 100px;
+    width: 100px;
 }
