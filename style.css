@@ -19,7 +19,7 @@
     font-size: 18px;
 }
 
-html, body, div, span, object, h1, h2, h3, p, a, abbr, acronym, img, ul, li {
+:not(h1,h2) {
     color: var(--text-color);
 }
 
@@ -44,12 +44,6 @@ h3+ul {
     margin-left: 20px;
     margin-bottom: 20px;
 }
-
-
-
-
-
-
 
 div[role~="article"] h3 {
     font-size: 24px;
@@ -86,12 +80,12 @@ a:active {
     color: var(--accent);
 }
 
-.wrapper .design-selection, .design-archives, .zen-resources {
+.wrapper .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
     border: 2px solid var(--border-color);
     border-radius: var(--radius);
     background-color: var(--card);
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
 }
 
@@ -99,13 +93,17 @@ a:active {
     background-color: var(--background-color);
 }
 
+a[href^="/"][href$="/"]::after {
+    content: " →";
+}
+
+
 
 .page-wrapper{
     display: grid;
-    grid-template: repeat(3,auto) / auto max-content;
+    grid-template: repeat(2,auto) / auto max-content;
     grid-template-areas: "intro side"
-                         "content side"
-                         "foot  foot";
+                         "content side";
     gap: 20px;
 }
 
@@ -135,7 +133,15 @@ section.intro {
 }
 
 footer  {
-    grid-area: foot;
+    padding: 20px;
+    margin-top: 10px;
+    width: max-content;
+}
+footer a[class^="zen"] {
+    text-decoration-line: underline;
+    text-decoration-color: var(--text-color);
+    text-decoration-style: double;
+    text-decoration-thickness: 2px;
 }
 
 body {
@@ -145,8 +151,33 @@ body {
 
 }
 
+.explanation h3::after {
+    content: url(icon-about.png);
+    filter: invert(100%)
+}
+
+.participation h3::after {
+    content: url(icon-people.png);
+    filter: invert(100%)
+}
+
+.benefits h3::after {
+    content: url(icon-benefit.png);
+    filter: invert(100%)
+}
+
+.requirements h3::after {
+    content: url(icon-checkbox.png);
+    filter: invert(100%)
+}
+
+[title*="Sheets"] {
+    color: var(--offset-color);
+}
+
 [role=banner] {
     background-image: url(black-hole-color.jpg);
+    border-radius: var(--radius);
     background-size: cover;
     background-position: center;
     padding: 50px;
@@ -157,6 +188,18 @@ body {
     border-bottom: 1px dotted var(--text-color);
     border-bottom: none;
     text-decoration: none;
+}
+
+p::first-letter {
+    font-size-adjust: .75;
+}
+
+.page-wrapper p::first-line {
+    font-weight: bolder;
+}
+
+div:empty {
+    background-color: red;
 }
 
 h1::before {
@@ -189,12 +232,26 @@ h2 {
     text-align: center;
 }
 
-h2>abbr, p>abbr {
+h2>abbr {
     color: var(--header-color);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+p>abbr {
+    color: var(--text-color);
     text-decoration: none;
     border-bottom: none;
 }
 
 h2>abbr:hover, p>abbr:hover {
     color: var(--accent-hover);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: start;
 }
