@@ -14,7 +14,7 @@
     --text-color: #60a8da;
     --offset-color: #f9ffff;
     --radius: 16px;
-    --background-color: #000913;
+    --background-color: #00050f;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 18px;
 }
@@ -24,6 +24,8 @@ html, body, div, span, object, h1, h2, h3, p, a, abbr, acronym, img, ul, li {
 }
 
 * {
+    margin: 0;
+    padding: 0;
     margin: 5px;
     padding: 1px;
 }
@@ -32,6 +34,22 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection, ul::sel
     background: var(--accent);
     color: var(--accent-hover);
 }
+
+h3~nav ul{
+    list-style-type: none;
+}
+
+h3+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
 
 div[role~="article"] h3 {
     font-size: 24px;
@@ -97,29 +115,19 @@ section.intro {
 
 .main.supporting {
     grid-area: content;
-    display: grid;
-    grid-template: auto auto / 50% 50%;
-    grid-template-areas: "explanation particitation"
-                         "requirements benefits";
-
+    column-count: 2;
+    column-gap: 20px;
 }
 
-.explanation {
-    grid-area: explanation;
+.explanation, .participation, .benefits, .requirements {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: var(--card);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: var(--radius);
 }
-
-.participation {
-    grid-area: particitation;
-}
-
-.benefits {
-    grid-area: benefits;
-}
-
-.requirements {
-    grid-area: requirements;
-}
-
 
 .sidebar {
     grid-area: side;
@@ -184,362 +192,9 @@ h2 {
 h2>abbr, p>abbr {
     color: var(--header-color);
     text-decoration: none;
+    border-bottom: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-html {
-
-}
-
-body {
-    
-}
-
-body:before, body:after {
-
-}
-
-body:before {
-
-}
-
-body:after {
-
-}
-
-.page-wrapper {
-
-}
-
-.page-wrapper:before {
-
-}
-
-.page-wrapper:after {
-    
-}
-
-h1, h2, h3, h4, h5 {
-
-}
-
-a {
-
-}
-
-a:hover, a:focus {
-
-}
-
-p {
-
-}
-
-/* -------INTRO SECTION------ */
-.intro {
-
-}
-
-.intro p {
-
-}
-
-.summary p:nth-child() {
-
-}
-
-.summary a {
-
-}
-
-.intro h1 {
-
-}
-
-.intro h1:before {
-
-}
-
-.intro h2 {
-
-}
-
-.preamble {
-
-}
-
-.preamble p:first-line {
-
-}
-
-.preamble p:nth-child() {
-
-}
-
-.preamble p:nth-child():first-line {
-
-}
-
-/* -------SIDEBAR ASIDE------- */
-.design-selection h3 {
-
-}
-
-.design-selection {
-
-}
-
-.design-selection ul {
-
-}
-
-.design-selection li {
-
-}
-
-.design-selection li a {
-
-}
-
-.sidebar a:hover, .sidebar a:focus {
-
-}
-
-.design-name {
-
-}
-
-.design-name:after {
-
-}
-
-.designer-name {
-
-}
-
-h3.archives, h3.resources {
-
-}
-
-.design-archives {
-
-}
-
-.design-archives ul {
-
-}
-
-.design-archives .viewall {
-
-}
-
-.design-archives .previous a, .design-archives .next a {
-
-}
-
-.design-archives .next a:hover, .design-archives .next a:focus {
-
-}
-
-.design-archives .previous a:hover, .design-archives .previous a:focus {
-
-}
-
-.viewall a, .zen-resources a {
-
-}
-
-.design-archives .next a {
-
-}
-
-.design-archives .previous a {
-
-}
-
-.sidebar .wrapper {
-
-}
-
-.zen-resources {
-
-}
-
-.zen-resources:after, .zen-resources ul:after {
-
-}
-
-.zen-resources:after {
-
-}
-
-.zen-resources ul:after {
-
-}
-
-.zen-resources ul {
-
-}
-
-.zen-resources li {
-
-}
-
-/* -------EXPLANATION------- */
-.explanation {
-
-}
-
-.explanation p:first-line, .participation p:first-line, .benefits p:first-line {
-
-}
-
-.explanation p:nth-child():first-line, .participation p:nth-child():first-line, .benefits p:nth-child():first-line {
-
-}
-
-.explanation h3 {
-
-}
-
-.explanation p {
-
-}
-
-.explanation p:nth-child() {
-
-}
-
-.benefits {
-
-}
-
-.benefits p:last-child {
-
-}
-
-.benefits h3 {
-
-}
-
-.benefits p {
-
-}
-
-.benefits:before {
-
-}
-
-.benefits:after {
-
-}
-
-.benefits p:after {
-
-}
-
-.requirements h3 {
-
-}
-
-.requirements {
-
-}
-
-.requirements p:nth-child() {
-
-}
-
-.requirements p:last-child {
-
-}
-
-footer:after {
-
-}
-
-footer {
-
-}
-
-footer a {
-
-}
-
-footer a:hover, footer a:focus {
-
-}
-
-/* ------- OMG FLEXBOX ------ */
-.page-wrapper {
-
-}
-
-.intro {
-
-}
-
-.main {
-
-}
-
-.sidebar {
-
+h2>abbr:hover, p>abbr:hover {
+    color: var(--accent-hover);
 }
-
