@@ -78,7 +78,7 @@ h2 > abbr {
     border-bottom: none;
 }
 
-h2 > abbr:hover, p>abbr:hover {
+h2 > abbr:hover, p > abbr:hover {
     color: var(--accent-hover);
 }
 
