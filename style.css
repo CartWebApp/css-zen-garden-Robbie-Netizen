@@ -234,16 +234,6 @@ div:empty {
     filter: invert(100%)
 }
 
-[class="class1"]{
-    color: red;
-}
-
-
-
-
-
-
-
 [title*="Sheets"] {
     color: var(--offset-color);
 }
