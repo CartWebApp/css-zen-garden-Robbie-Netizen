@@ -5,7 +5,7 @@
     --accent: #0ea5e9;
     --accent-hover: #ffffff;
     --accent-visited: #3b82f6;
-    --bg: linear-gradient(135deg, #000811, ##001333);
+    --bg: linear-gradient(135deg, #000811, #001333, #000811);
     --card: #000000;
     --muted: #6b7280;
     --muted-size: 16px;
@@ -19,9 +19,10 @@
     font-size: 18px;
 }
 
-:not(h1,h2,h3) {
-    color: var(--text-color);
-    text-align: justify;
+#css-zen-garden {
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 * {
@@ -31,9 +32,62 @@
     padding: 1px;
 }
 
+*:not(h1,h2,h3) {
+    color: var(--text-color);
+    text-align: justify;
+}
+
 *::selection {
     background: var(--accent);
     color: var(--accent-hover);
+}
+
+h1 {
+    font-size: 100px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+}
+
+h1::before {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    content: "";
+    width: 100px;
+    height: 100px;
+    margin: -20px 20px 0 0;
+    background: url(spacecraft-interstellar.webp);
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-self: center;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+}
+
+h2>abbr {
+    color: var(--header-color);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+h2>abbr:hover, p>abbr:hover {
+    color: var(--accent-hover);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: start;
 }
 
 h3~nav ul{
@@ -44,22 +98,6 @@ h3+ul {
     list-style-type: square;
     margin-left: 20px;
     margin-bottom: 20px;
-}
-
-div[role~="article"] h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--header-color);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    text-align: start;
-}
-
-div[id|="design"] h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--header-color);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    text-align: center;
 }
 
 a:visited {
@@ -81,6 +119,62 @@ a:active {
     color: var(--accent);
 }
 
+a[href^="/"][href$="/"]::after {
+    content: " →";
+}
+
+
+p::first-letter {
+    font-size-adjust: .75;
+}
+
+.page-wrapper p::first-line {
+    font-weight: bolder;
+}
+
+p>abbr {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+section.intro {
+    grid-area: intro;
+}
+
+footer  {
+    padding: 20px;
+    margin-top: 10px;
+    width: max-content;
+}
+
+footer a[class^="zen"] {
+    text-decoration-line: overline underline;
+    text-decoration-color: var(--text-color);
+    text-decoration-style: single;
+    text-decoration-thickness: 2px;
+}
+
+div[role~="article"] h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: start;
+}
+
+div[id|="design"] h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+}
+
+div:empty {
+    margin: 0;
+}
+
 .wrapper .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
     border: 2px solid var(--border-color);
     border-radius: var(--radius);
@@ -90,26 +184,12 @@ a:active {
     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
 }
 
-#css-zen-garden {
-    background-color: var(--background-color);
-}
-
-a[href^="/"][href$="/"]::after {
-    content: " →";
-}
-
-
-
 .page-wrapper{
     display: grid;
     grid-template: repeat(2,auto) / auto max-content;
     grid-template-areas: "intro side"
                          "content side";
     gap: 20px;
-}
-
-section.intro {
-    grid-area: intro;
 }
 
 .main.supporting {
@@ -134,25 +214,6 @@ section.intro {
     margin: 10%;
 }
 
-footer  {
-    padding: 20px;
-    margin-top: 10px;
-    width: max-content;
-}
-footer a[class^="zen"] {
-    text-decoration-line: overline underline;
-    text-decoration-color: var(--text-color);
-    text-decoration-style: single;
-    text-decoration-thickness: 2px;
-}
-
-body {
-    background: var(--bg);
-    line-height: 1.6;
-    font-size: 18px;
-
-}
-
 .explanation h3::after {
     content: url(icon-about.png);
     filter: invert(100%)
@@ -173,6 +234,16 @@ body {
     filter: invert(100%)
 }
 
+[class="class1"]{
+    color: red;
+}
+
+
+
+
+
+
+
 [title*="Sheets"] {
     color: var(--offset-color);
 }
@@ -190,75 +261,4 @@ body {
     border-bottom: 1px dotted var(--text-color);
     border-bottom: none;
     text-decoration: none;
-}
-
-p::first-letter {
-    font-size-adjust: .75;
-}
-
-.page-wrapper p::first-line {
-    font-weight: bolder;
-}
-
-div:empty {
-    background: var(--accent);
-}
-
-h1::before {
-    display: inline-block;
-    position: relative;
-    top: 20px;
-    content: "";
-    width: 100px;
-    height: 100px;
-    margin: -20px 20px 0 0;
-    background: url(spacecraft-interstellar.webp);
-    opacity: 0.85;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    justify-self: center;
-}
-
-h1 {
-    font-size: 100px;
-    color: var(--header-color);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    text-align: center;
-}
-
-h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: var(--header-color);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    text-align: center;
-}
-
-h2>abbr {
-    color: var(--header-color);
-    text-decoration: none;
-    border-bottom: none;
-}
-
-p>abbr {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: none;
-}
-
-h2>abbr:hover, p>abbr:hover {
-    color: var(--accent-hover);
-}
-
-h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--header-color);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    text-align: start;
-}
-
-.extra1 {
-    position: 100px;
-    width: 100px;
 }
