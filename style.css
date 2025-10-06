@@ -44,9 +44,13 @@
     color: var(--accent-hover);
 }
 
+<<<<<<< HEAD
 /* Headings */
 
 h1 {
+=======
+h1:first-of-type {
+>>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
     font-size: 100px;
     color: var(--header-color);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
@@ -68,7 +72,7 @@ h1::before {
     justify-self: center;
 }
 
-h2 {
+h2:only-child {
     font-size: 50px;
     margin-bottom: 10px;
     color: var(--header-color);
@@ -76,17 +80,17 @@ h2 {
     text-align: center;
 }
 
-h2>abbr {
+h2 > abbr {
     color: var(--header-color);
     text-decoration: none;
     border-bottom: none;
 }
 
-h2>abbr:hover, p>abbr:hover {
+h2 > abbr:hover, p > abbr:hover {
     color: var(--accent-hover);
 }
 
-h3 {
+h3:only-of-type {
     font-size: 24px;
     margin-bottom: 10px;
     color: var(--header-color);
@@ -94,17 +98,24 @@ h3 {
     text-align: start;
 }
 
-h3~nav ul{
+h3 ~ nav ul{
     list-style-type: none;
 }
 
-h3+ul {
+h3 + ul {
     list-style-type: square;
     margin-left: 20px;
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 /* Link states */
+=======
+a:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+>>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
 
 a:visited {
     color: var(--accent-visited);
@@ -129,8 +140,11 @@ a[href^="/"][href$="/"]::after {
     content: " →";
 }
 
+<<<<<<< HEAD
 /* Custom styles */
 
+=======
+>>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
 p::first-letter {
     font-size-adjust: .75;
 }
@@ -139,7 +153,7 @@ p::first-letter {
     font-weight: bolder;
 }
 
-p>abbr {
+p > abbr {
     color: var(--text-color);
     text-decoration: none;
     border-bottom: none;
@@ -178,7 +192,56 @@ div[id|="design"] h3 {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .wrapper .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
+=======
+div[class^="extra"] {
+    background-color: #FF6A13;
+    text-align: center;
+    margin: 0px;
+    height: 10px;
+    width: 50px;
+    position: absolute;
+    left: 300px;
+}
+
+div:empty:nth-last-of-type(3) {
+    background-color: #00B5E2;
+    width: 50px;
+    position: absolute;
+    left: 50px;
+}
+
+div:empty:nth-child(2) {
+    background-color: #00B140;
+    width: 50px;
+    position: absolute;
+    left: 250px;
+}
+
+div:empty:nth-last-child(3) {
+    background-color: #000000;
+    width: 50px;
+    position: absolute;
+    left: 200px;
+}
+
+div:empty:nth-of-type(3) {
+    background-color: #FFEA00;
+    width: 50px;
+    position: absolute;
+    left: 150px;
+}
+
+div:empty:last-of-type {
+    background-color: #D1007F;
+    width: 50px;
+    position: absolute;
+    left: 100px;
+}
+
+.wrapper:first-child .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
+>>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
     border: 2px solid var(--border-color);
     border-radius: var(--radius);
     background-color: var(--card);
@@ -225,7 +288,14 @@ section.intro {
     border: 2px solid var(--border-color);
 }
 
+<<<<<<< HEAD
 /* Icons for sections */
+=======
+.sidebar:last-child {
+    grid-area: side;
+    margin: 10%;
+}
+>>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
 
 .explanation h3::after {
     content: url(icon-about.png);
