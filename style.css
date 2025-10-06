@@ -44,13 +44,9 @@
     color: var(--accent-hover);
 }
 
-<<<<<<< HEAD
 /* Headings */
 
-h1 {
-=======
 h1:first-of-type {
->>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
     font-size: 100px;
     color: var(--header-color);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
@@ -108,14 +104,12 @@ h3 + ul {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 /* Link states */
-=======
+
 a:focus {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
 }
->>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
 
 a:visited {
     color: var(--accent-visited);
@@ -140,11 +134,8 @@ a[href^="/"][href$="/"]::after {
     content: " →";
 }
 
-<<<<<<< HEAD
 /* Custom styles */
 
-=======
->>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
 p::first-letter {
     font-size-adjust: .75;
 }
@@ -192,9 +183,8 @@ div[id|="design"] h3 {
     text-align: center;
 }
 
-<<<<<<< HEAD
-.wrapper .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
-=======
+/* Extra divs */
+
 div[class^="extra"] {
     background-color: #FF6A13;
     text-align: center;
@@ -240,8 +230,9 @@ div:empty:last-of-type {
     left: 100px;
 }
 
+/* Sidebars */
+
 .wrapper:first-child .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
->>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
     border: 2px solid var(--border-color);
     border-radius: var(--radius);
     background-color: var(--card);
@@ -270,7 +261,7 @@ section.intro {
     column-gap: 20px;
 }
 
-.sidebar {
+.sidebar:last-child {
     grid-area: side;
     margin: 10%;
 }
@@ -288,14 +279,7 @@ section.intro {
     border: 2px solid var(--border-color);
 }
 
-<<<<<<< HEAD
 /* Icons for sections */
-=======
-.sidebar:last-child {
-    grid-area: side;
-    margin: 10%;
-}
->>>>>>> b6df8f2e771501afe035940a1c172ea0cbd148d3
 
 .explanation h3::after {
     content: url(icon-about.png);
