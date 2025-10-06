@@ -19,6 +19,8 @@
     font-size: 18px;
 }
 
+/* Page formatting */
+
 #css-zen-garden {
     background: var(--bg);
     line-height: 1.6;
@@ -41,6 +43,8 @@
     background: var(--accent);
     color: var(--accent-hover);
 }
+
+/* Headings */
 
 h1 {
     font-size: 100px;
@@ -100,6 +104,8 @@ h3+ul {
     margin-bottom: 20px;
 }
 
+/* Link states */
+
 a:visited {
     color: var(--accent-visited);
     outline: 2px solid var(--accent);
@@ -123,6 +129,7 @@ a[href^="/"][href$="/"]::after {
     content: " →";
 }
 
+/* Custom styles */
 
 p::first-letter {
     font-size-adjust: .75;
@@ -138,9 +145,7 @@ p>abbr {
     border-bottom: none;
 }
 
-section.intro {
-    grid-area: intro;
-}
+/* Footer */
 
 footer  {
     padding: 20px;
@@ -154,6 +159,8 @@ footer a[class^="zen"] {
     text-decoration-style: single;
     text-decoration-thickness: 2px;
 }
+
+/* Article headings */
 
 div[role~="article"] h3 {
     font-size: 24px;
@@ -171,10 +178,6 @@ div[id|="design"] h3 {
     text-align: center;
 }
 
-div:empty {
-    margin: 0;
-}
-
 .wrapper .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
     border: 2px solid var(--border-color);
     border-radius: var(--radius);
@@ -184,6 +187,8 @@ div:empty {
     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
 }
 
+/* Page layout */
+
 .page-wrapper{
     display: grid;
     grid-template: repeat(2,auto) / auto max-content;
@@ -192,11 +197,22 @@ div:empty {
     gap: 20px;
 }
 
+section.intro {
+    grid-area: intro;
+}
+
 .main.supporting {
     grid-area: content;
     column-count: 2;
     column-gap: 20px;
 }
+
+.sidebar {
+    grid-area: side;
+    margin: 10%;
+}
+
+/* Masonry styling */
 
 .explanation, .participation, .benefits, .requirements {
     display: inline-block;
@@ -209,10 +225,7 @@ div:empty {
     border: 2px solid var(--border-color);
 }
 
-.sidebar {
-    grid-area: side;
-    margin: 10%;
-}
+/* Icons for sections */
 
 .explanation h3::after {
     content: url(icon-about.png);
@@ -234,6 +247,8 @@ div:empty {
     filter: invert(100%)
 }
 
+/* Miscellaneous */
+
 [title*="Sheets"] {
     color: var(--offset-color);
 }
@@ -251,4 +266,8 @@ div:empty {
     border-bottom: 1px dotted var(--text-color);
     border-bottom: none;
     text-decoration: none;
+}
+
+div:empty {
+    margin: 0;
 }
